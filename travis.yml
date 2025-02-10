@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - 8
+install:
+  - npm install -g zcatalyst-cli
+jobs:
+  include:
+    - stage: functions
+      before_script:
+        - cd functions/catly/server
+      script:
+        - echo 'function!!'
+        - echo 'Installing Deps!'
+        - npm install
+      after_success:
+        - echo 'deploying function!'
+        - catalyst deploy --only functions --project 29273000000009004 --verbose
+    - stage: client
+      script:
+        - echo 'deploying client!!'
+    - catalyst deploy --only client --project29273000000009004 --verbose
