@@ -1,0 +1,9 @@
+{
+	"name": "dailysales",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "nishanthan.r@chakraa.io",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}

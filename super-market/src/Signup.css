@@ -1,0 +1,33 @@
+input[type="submit"] {
+  background-color: green;
+  color: white;
+  width: 40%;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+#link {
+  font-size: medium;
+  color: blue;
+}
+.modal-content {
+  background-color: #c0c0c0;
+  margin: 30px auto;
+  /* 5% from the top, 15% from the bottom and centered /
+    width: 25%;
+    / Could be more or less, depending on screen size */
+}
+.signupfnbtn {
+  width: 30%;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: green;
+  height: 100%;
+}
+p {
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+{
+	"deployment": {
+		"name": "super_market_ad_fn",
+		"stack": "node20",
+		"type": "advancedio",
+		"env_variables": {}
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "targets": [
+      "super_market_ad_fn",
+      "stockalertfuntion",
+      "dailysales"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "super-market",
+    "plugin": "zcatalyst-cli-plugin-react"
+  },
+  "appsail": [
+    {
+      "source": "/var/www/catalyst/ad/appsail",
+      "name": "appsail"
+    }
+  ]
+}
