@@ -5,7 +5,11 @@ jobs:
       - npm install -g zcatalyst-cli
       - catalyst --version
       - echo "Its working"
+  deploy:
+    - echo "Deploying"
+    - catalyst deploy
 stages:
   - name: build
     jobs:
       - catalyst-cli-setup
+      - deploy
