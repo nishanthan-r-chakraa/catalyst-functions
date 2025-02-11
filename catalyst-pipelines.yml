@@ -2,15 +2,14 @@ version: 1
 jobs:
   catalyst-cli-setup:
     steps:
-      - npm install -g zcatalyst-cli
-      - catalyst --version
       - echo "Its working"
-  deploy:
-    steps:
+      - npm install -g zcatalyst-cli
+      - echo "Installed zcatalyst-cli"
+      - catalyst --version
       - echo "Deploying"
       - catalyst deploy
+      - echo "Deployed"
 stages:
   - name: build
     jobs:
       - catalyst-cli-setup
-      - deploy
