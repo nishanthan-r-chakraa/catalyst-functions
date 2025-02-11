@@ -11,13 +11,13 @@ jobs:
       - echo "Deployed"
     notify:
       on-start:
-        - notify-type: email
-          notify-variables:
-            to: nishanthan.r@chakraa.io
+        notify-type: email
+        notify-variables:
+          to: nishanthan.r@chakraa.io
       on-end:
-        - notify-type: email
-          notify-variables:
-            to: nishanthan.r@chakraa.io
+        notify-type: email
+        notify-variables:
+          to: nishanthan.r@chakraa.io
 stages:
   - name: build
     jobs:
