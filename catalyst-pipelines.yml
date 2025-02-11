@@ -7,7 +7,7 @@ jobs:
       - echo "Installed zcatalyst-cli"
       - catalyst --version
       - echo "Deploying"
-      - catalyst deploy --only functions
+      - catalyst deploy --only client
       - echo "Deployed"
 stages:
   - name: build
