@@ -1,4 +1,4 @@
-version: 1.0
+version: 1
 jobs:
   hello:
     steps:
@@ -15,3 +15,20 @@ stages:
       - - hello
         - world
       - hello-world
+  - name: dev
+    jobs:
+      - world
+      - hello
+      - hello-world
+    when:
+      and:
+        - equal:
+            - << status.build.hello >>
+            - success
+        - equal:
+            - << status.build.hello-world >>
+            - failed
+pipeline-when:
+  equal:
+    - << status.build >>
+    - success
