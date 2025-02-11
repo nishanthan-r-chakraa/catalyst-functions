@@ -9,15 +9,15 @@ jobs:
       - echo "Deploying"
       - catalyst deploy --only functions
       - echo "Deployed"
-  notify:
-    on-start:
-      - notify-type: email
-        notify-variables:
-          to: nishanthan.r@chakraa.io
-    on-end:
-      - notify-type: email
-        notify-variables:
-          to: nishanthan.r@chakraa.io
+    notify:
+      on-start:
+        - notify-type: email
+          notify-variables:
+            to: nishanthan.r@chakraa.io
+      on-end:
+        - notify-type: email
+          notify-variables:
+            to: nishanthan.r@chakraa.io
 stages:
   - name: build
     jobs:
