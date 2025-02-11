@@ -13,3 +13,12 @@ stages:
   - name: build
     jobs:
       - catalyst-cli-setup
+notify:
+  on-start:
+    - notify-type: email
+      notify-variables:
+        to: nishanthan.r@chakraa.io
+  on-end:
+    - notify-type: email
+      notify-variables:
+        to: nishanthan.r@chakraa.io
