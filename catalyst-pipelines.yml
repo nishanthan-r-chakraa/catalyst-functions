@@ -1,34 +1,11 @@
 version: 1
 jobs:
-  hello:
+  catalyst-cli-setup:
     steps:
-      - echo "Hello"
-  world:
-    steps:
-      - echo "World"
-  hello-world:
-    steps:
-      - echo "Hello World!"
+      - npm install -g zcatalyst-cli
+      - catalyst --version
+      - echo "Its working"
 stages:
   - name: build
     jobs:
-      - - hello
-        - world
-      - hello-world
-  - name: dev
-    jobs:
-      - world
-      - hello
-      - hello-world
-    when:
-      and:
-        - equal:
-            - << status.build.hello >>
-            - success
-        - equal:
-            - << status.build.hello-world >>
-            - failed
-pipeline-when:
-  equal:
-    - << status.build >>
-    - success
+      - catalyst-cli-setup
